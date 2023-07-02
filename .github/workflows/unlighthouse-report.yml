@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  demo:
+  assertions-and-static-report:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +19,8 @@ jobs:
 
       - name: Unlighthouse assertions and client
         run: unlighthouse-ci --site esteban-soubiran.site --budget 75 --build-static
+
+      - run: ls -la
 
       - name: Deploy report to Netlify
         uses: nwtgck/actions-netlify@v1.2
