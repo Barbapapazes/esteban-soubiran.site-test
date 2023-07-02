@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install Dependencies
-        run: npm install @unlighthouse/cli puppeteer
+        run: npm install -g @unlighthouse/cli puppeteer
 
       - name: Unlighthouse assertions and client
         run: unlighthouse-ci --site esteban-soubiran.site --budget 75 --build-static
